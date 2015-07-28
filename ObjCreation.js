@@ -36,3 +36,13 @@ bob.getYearOfBirth = function() {
 };
 
 console.log(bob.getYearOfBirth());
+
+//Let's rewrite bob.setAge method using the "this" keyword
+
+bob.setAgeUsingThis = function(age) {
+	this.age = age;
+}
+
+console.log(bob.age);
+bob.setAgeUsingThis(54);
+console.log(bob.age);
