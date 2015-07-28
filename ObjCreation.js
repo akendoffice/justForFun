@@ -16,3 +16,23 @@ console.log(buddy.species);
 //Second way of accessing properties -- Bracket notation
 console.log(snoopy["age"]);
 console.log(buddy["age"]);
+
+// Start adding methods to your objects
+var bob = new Object();
+bob.name = "AK";
+bob.age = 30;
+
+// Lets add a method this time
+bob.setAge = function(newAge){
+	bob.age = newAge;
+};
+
+console.log(bob.age);
+bob.setAge(90);
+console.log(bob.age);
+
+bob.getYearOfBirth = function() {
+	return 2014 - bob.age;
+};
+
+console.log(bob.getYearOfBirth());
