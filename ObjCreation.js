@@ -46,3 +46,27 @@ bob.setAgeUsingThis = function(age) {
 console.log(bob.age);
 bob.setAgeUsingThis(54);
 console.log(bob.age);
+
+// Why the hell did we need the this keyword, just to replace bob.age to this.age?
+// Nope, now you can use the about method to set the age of any object not just bob.
+
+var guru = new Object();
+guru.name = "guru";
+guru.age = 34;
+
+var setAge = function(age){
+	this.age = age;
+};
+
+guru.setAge = setAge;
+
+guru.setAge(78);
+
+var mike = new Object();
+mike.name = "UUU";
+mike.age = 3;
+
+mike.setAge = setAge;
+mike.setAge(78);
+
+console.log(mike.age + " " + guru.age);
