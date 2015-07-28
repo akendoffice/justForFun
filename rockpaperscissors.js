@@ -1,6 +1,6 @@
-var choices = ["Rock","Paper","Scissors"];
+var choices = ["rock","paper","scissors"];
 var userChoice = function(){
-    var userSelectedChoice = window.prompt("Enter your selection","Rock/Paper/scissors");
+    var userSelectedChoice = window.prompt("Enter your selection","rock/paper/scissors");
     console.log("User selected choice is " + userSelectedChoice);
     return userSelectedChoice;
 };
@@ -19,18 +19,18 @@ var computer = computerChoice();
 var compareChoices = function(user, computer){
     switch(user) {
         case "Rock":
-            if(computer == "Scissors")
+            if(computer == "scissors")
                 console.log("User wins");
-            else if(computer == "Rock")
+            else if(computer == "rock")
                 console.log("nobody wins");
             else
                 console.log("Computer wins");
             break;
         case "Scissors":
-            if(computer == "Paper"){
+            if(computer == "paper"){
                 console.log("User wins");
             }
-            else if(computer == "Rock"){
+            else if(computer == "rock"){
                 console.log("User Wins");
             }
             else{
