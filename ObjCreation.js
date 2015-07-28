@@ -53,11 +53,11 @@ console.log(bob.age);
 var guru = new Object();
 guru.name = "guru";
 guru.age = 34;
-
+//Create a method outside with file scope
 var setAge = function(age){
 	this.age = age;
 };
-
+// Add that method as a behaviour to your object which is already existing or for a new object that you are creating
 guru.setAge = setAge;
 
 guru.setAge(78);
@@ -70,3 +70,21 @@ mike.setAge = setAge;
 mike.setAge(78);
 
 console.log(mike.age + " " + guru.age);
+
+
+//You can also create an method for a specific object directly
+var rectangle = new Object();
+rectangle.height = 3;
+rectangle.width = 4;
+
+rectangle.setHeight = function(newHeight){
+	this.height = newHeight
+};
+
+rectangle.setWidth = function(newWidth){
+	this.width = newWidth;
+};
+rectangle.setHeight(6);
+rectangle.setWidth(8);
+
+console.log(rectangle.height + " " + rectangle.width);
